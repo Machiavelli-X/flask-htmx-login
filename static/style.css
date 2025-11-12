@@ -1,0 +1,168 @@
+/*  General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*  Login Page */
+.login-body {
+  background-color: #d5ff40;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 320px;
+  animation: fadeIn 1s ease;
+}
+
+.login-title {
+  font-size: 2rem;
+  color: #000;
+  font-weight: 700;
+}
+
+.login-subtitle {
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #aaa;
+}
+
+.login-btn {
+  width: 100%;
+  background: #000;
+  color: #d5ff40;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #222;
+}
+
+/* Home Page */
+.home-body {
+  background: #d5ff40;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover {
+  opacity: 0.6;
+}
+
+/* Hero Section */
+.hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 40px 60px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  max-width: 400px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #000;
+}
+
+.hero-text p {
+  margin-top: 10px;
+  color: #333;
+  font-size: 1rem;
+}
+
+.hero-tags {
+  margin-top: 20px;
+}
+
+.hero-tags span {
+  background: #000;
+  color: #d5ff40;
+  padding: 8px 12px;
+  margin-right: 8px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #d5ff40;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.4s ease-in-out;
+}
+
