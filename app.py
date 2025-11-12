@@ -39,4 +39,5 @@ def logout():
     return render_template("index.html")
 
 if __name__ == "__main__":
-    app.run(debug=True)#starts the built-in development server
+  port = int(os.environ.get("PORT", 5000))  # Render gives this automatically
+    app.run(host="0.0.0.0", port=port, debug=True)
