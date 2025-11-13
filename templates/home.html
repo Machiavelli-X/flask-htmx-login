@@ -1,32 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Ayaan</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+</head>
+
 <body class="home-body">
-  <script>alert('Welcome, user!');</script>
-  <header class="navbar">
-    <div class="logo">Guten Tag!</div>
-    <nav>
-      <a href="#">About</a>
-      <a href="#">Projects</a>
-      <a href="#">Services</a>
-      <a href="#" hx-get="/" hx-target="body" hx-swap="outerHTML">Logout</a>
-    </nav>
-  </header>
+  <div id="page-wrapper">
 
-  <main class="hero">
-    <div class="hero-text">
-      <h1>Willkommen, {{ username }} 👋</h1>
-      <p>The test home page — where creativity meets interactivity ⚡</p>
+    {% if show_welcome %}
+    <script>
+      alert("Welcome back, Demo_user!");
+    </script>
+    {% endif %}
 
-      <div class="hero-tags">
-        <span>🚀 Interactive Demo</span>
-        <span>✨ Built with HTMX</span>
+    <header class="navbar">
+      <div class="logo">Guten Tag!</div>
+      <nav>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Services</a>
+        <a href="/logout">Logout</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div class="hero-text">
+        <h1>Willkommen, mein Herr</h1>
+        <p>The test home page — where creativity meets interactivity ⚡</p>
+
+        <div class="hero-tags">
+          <span>🚀 Interactive Demo</span>
+          <span>✨ Built with HTMX</span>
+        </div>
       </div>
-    </div>
 
-    <div class="hero-image">
-      <img src="https://images.unsplash.com/photo-1677007766618-9933e5480cbb?auto=format&fit=crop&w=800&q=80" alt="Art Image" />
-    </div>
-  </main>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1677007766618-9933e5480cbb?auto=format&fit=crop&w=800&q=80" alt="Art Image" />
+      </div>
+    </main>
 
-  <footer class="footer">
-    <p>💻 Created by Ayaan | Test Home Page</p>
-  </footer>
+    <footer class="footer">
+      <p>💻 Created by Ayaan | Test Home Page</p>
+    </footer>
+
+  </div>
 </body>
+</html>
