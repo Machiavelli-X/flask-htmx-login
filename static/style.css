@@ -129,24 +129,20 @@
   padding: 8px 12px;
   margin-right: 8px;
   border-radius: 25px;
-  font-size: 0.9rem;
 }
 
 /* Footer */
 .footer {
   text-align: center;
   padding: 20px;
-  background: #000;
-  color: #d5ff40;
-  font-weight: 500;
-  letter-spacing: 1px;
+  color: #000;
 }
 
 /* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;
@@ -154,15 +150,19 @@
   }
 }
 
-@keyframes shake {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  50% { transform: translateX(5px); }
-  75% { transform: translateX(-5px); }
-  100% { transform: translateX(0); }
-}
-
+/* Shake animation */
 .shake {
-  animation: shake 0.4s ease-in-out;
+  animation: shake 0.5s;
 }
 
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  75% {
+    transform: translateX(10px);
+  }
+}
